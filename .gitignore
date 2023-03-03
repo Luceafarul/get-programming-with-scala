@@ -17,3 +17,11 @@ project/plugins/project/
 *.log
 
 **/.bsp
+
+# VS Code and Metals
+.bloop/
+.metals/
+.vscode/
+project/.bloop/
+project/project
+project/metals.sbt

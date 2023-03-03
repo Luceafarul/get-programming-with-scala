@@ -8,7 +8,6 @@ import io.circe.generic.auto._
 import scala.util.Try
 
 object Parsers {
-
   def parseInt(row: Map[String, String], key: String): Option[Int] =
     parseAs(row, key, _.toInt)
 
@@ -21,12 +20,10 @@ object Parsers {
   def parseFloat(row: Map[String, String], key: String): Option[Float] =
     parseAs(row, key, _.toFloat)
 
-  def parseLocalDate(row: Map[String, String],
-                     key: String): Option[LocalDate] =
+  def parseLocalDate(row: Map[String, String], key: String): Option[LocalDate] =
     parseAs(row, key, LocalDate.parse)
 
-  def parseGenres(row: Map[String, String],
-                  key: String): Option[List[Genre]] =
+  def parseGenres(row: Map[String, String], key: String): Option[List[Genre]] =
     parseJsonAs[List[Genre]](row, key)
 
   private def parseJsonAs[T: Decoder](row: Map[String, String], key: String): Option[T] =
