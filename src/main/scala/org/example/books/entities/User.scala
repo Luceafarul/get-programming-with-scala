@@ -1,5 +1,5 @@
 package org.example.books.entities
 
-case class User(id: Long, fullName: String)
+final case class User(id: Long, fullName: String)
 
-case class BookLoan(book: Book, user: User)
+final case class BookLoan(book: Book, user: User)
