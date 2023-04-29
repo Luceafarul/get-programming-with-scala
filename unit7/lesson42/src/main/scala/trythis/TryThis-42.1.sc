@@ -8,7 +8,6 @@ case class Money(amount: Double, currency: Currency)
 // a numeric value and perform calculations, such as summing two Money instances.
 // Forbid operations between monetary amounts that have different currencies.
 
-
 // ANSWER
 
 import scala.util.Try
@@ -36,7 +35,7 @@ object Money {
     }
 
     override def negate(x: Money): Money =
-      x.copy(amount = - x.amount)
+      x.copy(amount = -x.amount)
 
     override def fromInt(x: Int): Money = Money(x, defaultCurrency)
 
@@ -54,7 +53,10 @@ object Money {
     }
 
     private def sameCurrencyOp(x: Money, y: Money) =
-      require(x.currency == y.currency, "Monetary amounts needs to have the same currency")
+      require(
+        x.currency == y.currency,
+        "Monetary amounts needs to have the same currency"
+      )
 
     override def parseString(text: String): Option[Money] = {
       text.split("\\s+").toList match {
@@ -64,7 +66,7 @@ object Money {
             currency <- Try(Currency.getInstance(currencyCode))
           } yield Money(amount, currency)
           parsedMoney.toOption
-        case _ => None  
+        case _ => None
       }
     }
   }
