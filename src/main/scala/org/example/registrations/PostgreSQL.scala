@@ -26,9 +26,12 @@ class PostgreSQL(initScript: String) {
       s"user=${container.getUsername}",
       s"password=${container.getPassword}"
     )
-    ConfigFactory.empty().withValue(
-      "url", ConfigValueFactory.fromAnyRef(components.mkString("&"))
-    )
+    ConfigFactory
+      .empty()
+      .withValue(
+        "url",
+        ConfigValueFactory.fromAnyRef(components.mkString("&"))
+      )
   }
 
 }
