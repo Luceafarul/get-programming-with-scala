@@ -2,9 +2,9 @@ name := "get-programming-with-scala-lesson48"
 
 version := "0.1"
 
-scalaVersion := "3.0.0"
+scalaVersion := "3.3.0"
 
-val CirceVersion = "0.14.1"
+val CirceVersion = "0.14.5"
 
 libraryDependencies ++= List(
   "io.circe" %% "circe-core" % CirceVersion,
