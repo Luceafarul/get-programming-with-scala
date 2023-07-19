@@ -17,3 +17,6 @@ project/plugins/project/
 *.log
 
 **/.bsp
+.bloop/
+.metals/
+.vscode/
