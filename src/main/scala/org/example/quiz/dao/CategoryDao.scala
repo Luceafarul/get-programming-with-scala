@@ -1,12 +1,11 @@
 package org.example.quiz.dao
 
-import io.getquill.{SnakeCase, PostgresJAsyncContext}
+import io.getquill.{ PostgresJAsyncContext, SnakeCase }
 import org.example.quiz.dao.records.Category
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{ ExecutionContext, Future }
 
-class CategoryDao(ctx: PostgresJAsyncContext[SnakeCase.type])
-                 (implicit ec: ExecutionContext) {
+class CategoryDao(ctx: PostgresJAsyncContext[SnakeCase.type])(implicit ec: ExecutionContext) {
   import ctx._
 
   private val categories = quote { query[Category] }
