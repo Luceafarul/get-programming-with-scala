@@ -1,7 +1,7 @@
 package org.example.quiz.dao
 
 import io.getquill.{ PostgresJAsyncContext, SnakeCase }
-import org.example.quiz.dao.records.{ Answer, Question }
+import org.example.quiz.dao.domain.{ Answer, Question }
 
 import scala.concurrent.{ ExecutionContext, Future }
 

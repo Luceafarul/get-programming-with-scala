@@ -1,12 +1,12 @@
 package org.example.quiz.service
 
 import org.example.quiz.dao.QuestionAnswerDao
-import org.example.quiz.dao.records.Quiz
-import org.example.quiz.dao.records.Quiz.QuizQuestion
+import org.example.quiz.dao.domain.Quiz
+import org.example.quiz.dao.domain.Quiz.QuizQuestion
 import cats.effect.ContextShift
 import cats.effect.IO
-import org.example.quiz.dao.records.Category
-import org.example.quiz.dao.records.Question
+import org.example.quiz.dao.domain.Category
+import org.example.quiz.dao.domain.Question
 
 class QuizService(
   dao: QuestionAnswerDao,

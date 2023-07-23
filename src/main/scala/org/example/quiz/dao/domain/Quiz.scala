@@ -1,4 +1,4 @@
-package org.example.quiz.dao.records
+package org.example.quiz.dao.domain
 
 import Quiz.QuizQuestion
 

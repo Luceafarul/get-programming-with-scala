@@ -6,8 +6,8 @@ import org.http4s.EntityEncoder
 import org.http4s.dsl.Http4sDsl
 import org.http4s.circe._
 import org.example.quiz.service.QuizService
-import org.example.quiz.dao.records.Quiz
-import org.example.quiz.dao.codecs.QuizJson._
+import org.example.quiz.dao.domain.Quiz
+import org.example.quiz.dao.formats.QuizJson._
 
 class QuizApi(quizService: QuizService) extends Http4sDsl[IO] {
   private implicit val quizEntityEncoder: EntityEncoder[IO, Quiz] = jsonEncoderOf[IO, Quiz]
