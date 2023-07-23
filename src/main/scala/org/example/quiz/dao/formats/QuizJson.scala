@@ -2,8 +2,8 @@ package org.example.quiz.dao.formats
 
 import io.circe._
 import io.circe.generic.semiauto._
-import org.example.quiz.dao.records.Quiz
-import org.example.quiz.dao.records.Quiz.QuizQuestion
+import org.example.quiz.dao.domain.Quiz
+import org.example.quiz.dao.domain.Quiz.QuizQuestion
 
 object QuizJson {
   import AnswerJson._

@@ -2,7 +2,7 @@ package org.example.quiz.dao.formats
 
 import io.circe._
 import io.circe.generic.semiauto._
-import org.example.quiz.dao.records.Category
+import org.example.quiz.dao.domain.Category
 
 object CategoryJson {
   implicit val encoder: Encoder[Category] = deriveEncoder[Category]
