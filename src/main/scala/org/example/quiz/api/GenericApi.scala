@@ -8,6 +8,6 @@ import org.http4s.HttpRoutes
 class GenericApi(genericService: GenericService) extends Http4sDsl[IO] {
   val routes = HttpRoutes.of[IO] {
     case GET -> Root / "ping"        => Ok("pong")
-    case GET -> Root / "healthCheck" => Ok(genericService.healthCheck)
+    case GET -> Root / "healthcheck" => Ok(genericService.healthCheck)
   }
 }
